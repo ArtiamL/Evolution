@@ -1,0 +1,88 @@
+@import "../../node_modules/bootstrap/scss/functions";
+
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/variables-dark";
+
+$primary: #4fd8eb;
+$seconday: #97f0ff;
+$tertiary: #00363d;
+$dark: #2a2a2a;
+$surface: #191c1d;
+$on-bg: #e1e3e3;
+
+$custom-colors: (
+    "primary": $primary,
+    "seconday": $seconday,
+    "tertiary": $tertiary,
+    "dark": $dark,
+    "surface": $surface,
+    "on-bg": $on-bg,
+);
+
+$theme-colors: map-merge($map1: $theme-colors, $map2: $custom-colors);
+
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+
+[data-bs-theme="blueTheme"] {
+    --bs-body-color: var(--bs-white);
+    --bs-body-color-rgb: #{to-rgb($white)};
+
+    --bs-body-bg: var(--bs-dark);
+    --bs-body-bg-rgb: #{to-rgb($dark)};
+
+    .navbar {
+        background-color: var(--bs-surface);
+
+        .navbar-brand {
+            color: $seconday;
+        }
+
+        .navbar-toggler{
+            border-color: $seconday;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb%28151, 240, 255%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+        
+        .nav-link {
+            color: var(--bs-on-bg);
+        }
+
+        .active {
+            color: var(--bs-white);
+        }
+    }
+
+    .card {
+        background-color: var(--bs-tertiary);
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+// .carousel {
+//     overflow: hidden;
+// }
+
+// .carousel-inner {
+//     overflow: visible;
+// }
+
+.carousel-caption {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    backdrop-filter: blur(2px);
+}
+
+// .carousel-control-prev,
+// .carousel-control-next {
+//     padding-bottom: 4rem;
+//     opacity: 100%;
+// }
