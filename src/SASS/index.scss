@@ -4,7 +4,7 @@
 @import "../../node_modules/bootstrap/scss/variables-dark";
 
 $primary: #4fd8eb;
-$seconday: #97f0ff;
+$seconday: #1c3438;
 $tertiary: #00363d;
 $dark: #2a2a2a;
 $surface: #191c1d;
@@ -33,11 +33,27 @@ $theme-colors: map-merge($map1: $theme-colors, $map2: $custom-colors);
     --bs-body-bg: var(--bs-dark);
     --bs-body-bg-rgb: #{to-rgb($dark)};
 
+    body {
+        overflow-x: hidden;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
     .navbar {
-        background-color: var(--bs-surface);
+        background-color: $surface;
 
         .navbar-brand {
-            color: $seconday;
+            color: $primary;
+        }
+
+        .form-control {
+            background-color: $tertiary;
+        }
+
+        .form-control::placeholder {
+            color: $on-bg;
         }
 
         .navbar-toggler{
@@ -57,32 +73,19 @@ $theme-colors: map-merge($map1: $theme-colors, $map2: $custom-colors);
         }
     }
 
+    .card-header {
+        background-color: rgba($tertiary, 0.3);
+    }
+
     .card {
-        background-color: var(--bs-tertiary);
+        background-color: rgba($surface, 0.3);
+        // background-color: $surface;
+    }
+
+    .carousel-caption {
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        backdrop-filter: blur(2px);
     }
 }
-
-a {
-    text-decoration: none;
-}
-
-// .carousel {
-//     overflow: hidden;
-// }
-
-// .carousel-inner {
-//     overflow: visible;
-// }
-
-.carousel-caption {
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    backdrop-filter: blur(2px);
-}
-
-// .carousel-control-prev,
-// .carousel-control-next {
-//     padding-bottom: 4rem;
-//     opacity: 100%;
-// }
