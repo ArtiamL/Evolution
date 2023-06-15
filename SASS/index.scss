@@ -1,7 +1,7 @@
-@import "./node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/functions";
 
-@import "./node_modules/bootstrap/scss/variables";
-@import "./node_modules/bootstrap/scss/variables-dark";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
 
 $primary: #4fd8eb;
 $seconday: #1c3438;
@@ -21,9 +21,9 @@ $custom-colors: (
 
 $theme-colors: map-merge($map1: $theme-colors, $map2: $custom-colors);
 
-@import "./node_modules/bootstrap/scss/maps";
-@import "./node_modules/bootstrap/scss/mixins";
-@import "./node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/bootstrap";
 
 
 [data-bs-theme="blueTheme"] {
