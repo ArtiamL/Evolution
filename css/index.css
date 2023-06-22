@@ -274,6 +274,8 @@ h6, .h6 {
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+
+  text-align: justify;
 }
 
 abbr[title] {
@@ -577,6 +579,8 @@ output {
 
 iframe {
   border: 0;
+  width: 100%;
+  height: 56.25vw;
 }
 
 summary {
@@ -4551,6 +4555,12 @@ textarea.form-control-lg {
   margin-left: calc(-0.5 * var(--bs-card-cap-padding-x));
 }
 
+.card-img {
+  width: 100%;
+  height: 50vw;
+  object-fit: cover;
+}
+
 .card-img-overlay {
   position: absolute;
   top: 0;
@@ -5254,6 +5264,9 @@ textarea.form-control-lg {
   .list-group-horizontal-md > .list-group-item + .list-group-item.active {
     margin-left: calc(-1 * var(--bs-list-group-border-width));
     border-left-width: var(--bs-list-group-border-width);
+  }
+  .card-img {
+      height: 15vw;
   }
 }
 @media (min-width: 992px) {

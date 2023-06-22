@@ -41,6 +41,12 @@ $theme-colors: map-merge($map1: $theme-colors, $map2: $custom-colors);
 
     a {
         text-decoration: none;
+        height: 100%;
+    }
+
+    iframe {
+        width: 100%;
+        height: 56.25vw;
     }
 
     .custom-tooltip {
